@@ -6,7 +6,7 @@ if(isset($_POST['delete_student']))
 {
     $student_id = mysqli_real_escape_string($con, $_POST['delete_student']);
 
-    $query = "DELETE FROM cahiers WHERE npro='$student_id' ";
+    $query = "DELETE FROM cahiers WHERE classe='$student_id' ";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
@@ -25,13 +25,13 @@ if(isset($_POST['delete_student']))
 
 if(isset($_POST['update_student']))
 {
-    $student_id = mysqli_real_escape_string($con, $_POST['npro']);
-    $name = mysqli_real_escape_string($con, $_POST['libelle']);
-    $email = mysqli_real_escape_string($con, $_POST['prix']);
-    $phone = mysqli_real_escape_string($con, $_POST['qstock']);
+    $student_id = mysqli_real_escape_string($con, $_POST['classe']);
+    $name = mysqli_real_escape_string($con, $_POST['date']);
+    $email = mysqli_real_escape_string($con, $_POST['cours']);
+    $phone = mysqli_real_escape_string($con, $_POST['details']);
     $course = mysqli_real_escape_string($con, $_POST['description']);
 
-    $query = "UPDATE cahiers SET npro='$student_id', libelle='$name', prix='$email', qstock='$phone', description='$course' WHERE npro='$student_id' ";
+    $query = "UPDATE cahiers SET classe='$student_id', date='$name', cours='$email', details='$phone', description='$course' WHERE classe='$student_id' ";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
@@ -52,13 +52,13 @@ if(isset($_POST['update_student']))
 
 if(isset($_POST['save_student']))
 {
-    $student_id = mysqli_real_escape_string($con, $_POST['npro']);
-    $name = mysqli_real_escape_string($con, $_POST['libelle']);
-    $email = mysqli_real_escape_string($con, $_POST['prix']);
-    $phone = mysqli_real_escape_string($con, $_POST['qstock']);
+    $student_id = mysqli_real_escape_string($con, $_POST['classe']);
+    $name = mysqli_real_escape_string($con, $_POST['date']);
+    $email = mysqli_real_escape_string($con, $_POST['cours']);
+    $phone = mysqli_real_escape_string($con, $_POST['details']);
     $course = mysqli_real_escape_string($con, $_POST['description']);
 
-    $query = "INSERT INTO cahiers (npro,libelle,prix,qstock,description) VALUES ('$student_id','$name','$email','$phone','$course')";
+    $query = "INSERT INTO cahiers (classe,date,cours,details,description) VALUES ('$student_id','$name','$email','$phone','$course')";
 
     $query_run = mysqli_query($con, $query);
     if($query_run)

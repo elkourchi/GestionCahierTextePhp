@@ -51,16 +51,16 @@
                                         {
                                             ?>
                                             <tr>
-                                                <td><?= $student['npro']; ?></td>
-                                                <td><?= $student['libelle']; ?></td>
-                                                <td><?= $student['prix']; ?></td>
-                                                <td><?= $student['qstock']; ?></td>
+                                                <td><?= $student['classe']; ?></td>
+                                                <td><?= $student['date']; ?></td>
+                                                <td><?= $student['cours']; ?></td>
+                                                <td><?= $student['details']; ?></td>
                                                 <td><?= $student['description']; ?></td>
                                                 <td>
-                                                    <a href="view.php?npro=<?= $student['npro']; ?>" class="btn btn-info btn-sm">Montrer</a>
-                                                    <a href="edit.php?npro=<?= $student['npro']; ?>" class="btn btn-success btn-sm">Modifier</a>
+                                                    <a href="view.php?classe=<?= $student['classe']; ?>" class="btn btn-info btn-sm">Montrer</a>
+                                                    <a href="edit.php?classe=<?= $student['classe']; ?>" class="btn btn-success btn-sm">Modifier</a>
                                                     <form action="code.php" method="POST" class="d-inline">
-                                                        <button type="submit" name="delete_student" value="<?=$student['npro'];?>" class="btn btn-danger btn-sm">Supprimer</button>
+                                                        <button type="submit" name="delete_student" value="<?=$student['classe'];?>" class="btn btn-danger btn-sm">Supprimer</button>
                                                     </form>
                                                 </td>
                                             </tr>

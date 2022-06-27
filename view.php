@@ -28,10 +28,10 @@ require 'dbcon.php';
                     <div class="card-body">
 
                         <?php
-                        if(isset($_GET['npro']))
+                        if(isset($_GET['classe']))
                         {
-                            $student_id = mysqli_real_escape_string($con, $_GET['npro']);
-                            $query = "SELECT * FROM cahiers WHERE npro='$student_id' ";
+                            $student_id = mysqli_real_escape_string($con, $_GET['classe']);
+                            $query = "SELECT * FROM cahiers WHERE classe='$student_id' ";
                             $query_run = mysqli_query($con, $query);
 
                             if(mysqli_num_rows($query_run) > 0)
@@ -41,25 +41,25 @@ require 'dbcon.php';
                                     <div class="mb-3">
                                         <label>Classe</label>
                                         <p class="form-control">
-                                            <?=$student['npro'];?>
+                                            <?=$student['classe'];?>
                                         </p>
                                     </div>
                                     <div class="mb-3">
                                         <label>Date</label>
                                         <p class="form-control">
-                                            <?=$student['libelle'];?>
+                                            <?=$student['date'];?>
                                         </p>
                                     </div>
                                     <div class="mb-3">
                                         <label>Cours</label>
                                         <p class="form-control">
-                                            <?=$student['prix'];?>
+                                            <?=$student['cours'];?>
                                         </p>
                                     </div>
                                     <div class="mb-3">
                                         <label>Details</label>
                                         <p class="form-control">
-                                            <?=$student['qstock'];?>
+                                            <?=$student['details'];?>
                                         </p>
                                     </div>
                                     <div class="mb-3">

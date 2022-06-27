@@ -32,10 +32,10 @@ require 'dbcon.php';
                     <div class="card-body">
 
                         <?php
-                        if(isset($_GET['npro']))
+                        if(isset($_GET['classe']))
                         {
-                            $student_id = mysqli_real_escape_string($con, $_GET['npro']);
-                            $query = "SELECT * FROM cahiers WHERE npro='$student_id' ";
+                            $student_id = mysqli_real_escape_string($con, $_GET['classe']);
+                            $query = "SELECT * FROM cahiers WHERE classe='$student_id' ";
                             $query_run = mysqli_query($con, $query);
 
                             if(mysqli_num_rows($query_run) > 0)
@@ -43,24 +43,24 @@ require 'dbcon.php';
                                 $student = mysqli_fetch_array($query_run);
                                 ?>
                                 <form action="code.php" method="POST">
-                                    <input type="hidden" name="npro" value="<?= $student['npro']; ?>">
+                                    <input type="hidden" name="classe" value="<?= $student['classe']; ?>">
 
                                     <div class="mb-3">
                                         <label>Classe</label>
-                                        <input type="text" name="npro" value="<?=$student['npro'];?>" class="form-control">
+                                        <input type="text" name="classe" value="<?=$student['classe'];?>" class="form-control">
                                     </div>
 
                                     <div class="mb-3">
                                         <label>Date</label>
-                                        <input type="text" name="libelle" value="<?=$student['libelle'];?>" class="form-control">
+                                        <input type="text" name="date" value="<?=$student['date'];?>" class="form-control">
                                     </div>
                                     <div class="mb-3">
                                         <label>Cours</label>
-                                        <input type="text" name="prix" value="<?=$student['prix'];?>" class="form-control">
+                                        <input type="text" name="cours" value="<?=$student['cours'];?>" class="form-control">
                                     </div>
                                     <div class="mb-3">
                                         <label>Details</label>
-                                        <input type="text" name="qstock" value="<?=$student['qstock'];?>" class="form-control">
+                                        <input type="text" name="details" value="<?=$student['details'];?>" class="form-control">
                                     </div>
                                     <div class="mb-3">
                                         <label>Remarques</label>

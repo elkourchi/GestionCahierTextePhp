@@ -33,19 +33,19 @@ session_start();
 
                             <div class="mb-3">
                                 <label>Classe :</label>
-                                <input type="text" name="npro" class="form-control">
+                                <input type="text" name="classe" class="form-control">
                             </div>
                             <div class="mb-3">
                                 <label>Date :</label>
-                                <input type="text" name="libelle" class="form-control">
+                                <input type="text" name="date" class="form-control">
                             </div>
                             <div class="mb-3">
                                 <label>Cours</label>
-                                <input type="text" name="prix" class="form-control">
+                                <input type="text" name="cours" class="form-control">
                             </div>
                             <div class="mb-3">
                                 <label>Details</label>
-                                <input type="text" name="qstock" class="form-control">
+                                <input type="text" name="details" class="form-control">
                             </div>
                             <div class="mb-3">
                                 <label>Remarques</label>
